@@ -6,8 +6,8 @@ import random
 import time
 import tkinter as tk
 import threading
-# ASCII แสดงจาก pixel
-ASCII_CHARS = "@%#*+=-:. "
+
+ASCII_CHARS = ['@', '#', '8', '&', '%', '$', '*', '+', '=', '-', ':', '.', ' ']
 WIDTH, HEIGHT = 120, 40
 
 
@@ -45,13 +45,16 @@ def show_warning():
     show_random_popup("Warning", "LOL")
     show_random_popup("Error", "LOL")
 
+
 def frame_to_ascii(frame):
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    resized = cv2.resize(gray, (WIDTH, HEIGHT))
+    resized = cv2.resize(frame, (WIDTH, HEIGHT))  # ปรับขนาดภาพ
     ascii_str = ""
     for row in resized:
-        for pixel in row:
-            ascii_str += ASCII_CHARS[pixel // 25]
+        for b, g, r in row:  # ใช้ RGB
+            # คำนวณความสว่าง (brightness) จาก RGB
+            brightness = int((r + g + b) / 3)
+            ascii_char = ASCII_CHARS[brightness * len(ASCII_CHARS) // 256]
+            ascii_str += f"\033[38;2;{r};{g};{b}m{ascii_char}\033[0m"  # แสดงสี RGB
         ascii_str += "\n"
     return ascii_str
 

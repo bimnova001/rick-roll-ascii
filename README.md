@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Rick Roll in Python</title>
 </head>
 <body style="font-family:sans-serif; line-height:1.6;">
   <h1>😈 This is a Python Rick Roll using .bin file</h1>

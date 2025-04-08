@@ -12,9 +12,7 @@
   <p><strong>A:</strong> Because <code>.bin</code> looks suspiciously innocent — your friend won’t realize it’s a video! If it were a regular <code>.mp4</code>, they might get suspicious and check it first... But <code>.bin</code>? They'll think it's some kind of boring data file 😎</p>
 
   <h2>💻 Python Code:</h2>
-  <pre><code># It will auto-download if 'fun.bin' doesn't exist
-# Then it will play Rick Roll in ASCII and pop up LOL messages
-# Try it and enjoy the chaos 😆</code></pre>
+  <pre><code> #it wil run rick roll and has TK troll so fun 😆</code></pre>
 
   <h3>🔗 GitHub:</h3>
   <p><a href="https://github.com/bimnova001/rick-roll-ascii" target="_blank">https://github.com/bimnova001/rick-roll-ascii</a></p>
